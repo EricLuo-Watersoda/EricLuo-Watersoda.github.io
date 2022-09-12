@@ -21,12 +21,12 @@
     <meta name="description" content="描述在昨天的数学课上，数学老师讲授了概率单元——频数与概率间的关系，即试验次数越多，一种事件发生的次数与试验次数的比值接近事件发生概率。基于以上，我花了几分钟完成了一个Python程序来验证这个结论(虽然调用的随机模块是伪随机)，通过输出的结果可以发现，试验次数越多正反面两种事件的频数越来越接近0.5，即50%的概率。 主程序库导入1import random  设置变量在这里，我们定义——0代表">
 <meta property="og:type" content="article">
 <meta property="og:title" content="频数趋于概率实验">
-<meta property="og:url" content="https://ericluo-watersoda.github.io/2022/09/10/%E9%A2%91%E6%95%B0%E8%B6%8B%E4%BA%8E%E6%A6%82%E7%8E%87%E5%AE%9E%E9%AA%8C/index.html">
+<meta property="og:url" content="https://ericluo-watersoda.github.io/posts/Frequency&Probability.html">
 <meta property="og:site_name" content="Eric_Luo&#39;s Blog">
 <meta property="og:description" content="描述在昨天的数学课上，数学老师讲授了概率单元——频数与概率间的关系，即试验次数越多，一种事件发生的次数与试验次数的比值接近事件发生概率。基于以上，我花了几分钟完成了一个Python程序来验证这个结论(虽然调用的随机模块是伪随机)，通过输出的结果可以发现，试验次数越多正反面两种事件的频数越来越接近0.5，即50%的概率。 主程序库导入1import random  设置变量在这里，我们定义——0代表">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-09-10T04:49:34.910Z">
-<meta property="article:modified_time" content="2022-09-10T08:45:13.697Z">
+<meta property="article:modified_time" content="2022-09-12T04:05:51.469Z">
 <meta property="article:author" content="Eric_Luo">
 <meta property="article:tag" content="Python数据处理">
 <meta name="twitter:card" content="summary_large_image">
@@ -335,7 +335,7 @@
 <p>在file&#x3D;docx.Document() 下为file.add_paragraph。展开为docx.Document().add_paragraph()。docx.Document().add_paragraph()是docx库中写入的语句</p>
 <h4 id="存储"><a href="#存储" class="headerlink" title="存储"></a>存储</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs Python">file.save(<span class="hljs-string">&quot;E:\python\coin.docx&quot;</span>)<br></code></pre></td></tr></table></figure>
 
-<p>docx.Document().save()是docx库中写入的语句</p>
+<p>docx.Document().save()是docx库中存储的语句，将输出的文件导出到绝对路径并保存</p>
 <h4 id="更新源码-1"><a href="#更新源码-1" class="headerlink" title="更新源码"></a>更新源码</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs Python"><span class="hljs-keyword">import</span> random<br><span class="hljs-keyword">import</span> docx<br>times=<span class="hljs-number">0</span><br>temp_0=<span class="hljs-number">0</span><br>temp_1=<span class="hljs-number">0</span><br>file=docx.Document()<br><span class="hljs-keyword">while</span> <span class="hljs-literal">True</span>:<br>    temp=random.randint(<span class="hljs-number">0</span>,<span class="hljs-number">1</span>) <span class="hljs-comment">#0正面 1反面</span><br>    times=times+<span class="hljs-number">1</span><br>    <span class="hljs-keyword">if</span> temp == <span class="hljs-number">0</span>:<br>        temp_0=temp_0+<span class="hljs-number">1</span><br>        num0=temp_0/times<br>        file.add_paragraph(<span class="hljs-string">&quot;%s次 ，正面%s次 ，频数=%s&quot;</span>%(times,temp_0,num0))<br>        <span class="hljs-built_in">print</span>(times)<br>    <span class="hljs-keyword">else</span>:<br>        temp_1=temp_1+<span class="hljs-number">1</span><br>        num1 = temp_1 / times<br>        file.add_paragraph(<span class="hljs-string">&quot;%s次 ，反面%s次 ，频数=%s&quot;</span>%(times,temp_1,num1))<br>        file.save(<span class="hljs-string">&quot;E:\python\coin.docx&quot;</span>)<br>        <span class="hljs-built_in">print</span>(times)<br></code></pre></td></tr></table></figure>
                 
               </div>
@@ -389,7 +389,7 @@
   <div class="license-box my-3">
     <div class="license-title">
       <div>频数趋于概率实验</div>
-      <div>https://ericluo-watersoda.github.io/2022/09/10/频数趋于概率实验/</div>
+      <div>https://ericluo-watersoda.github.io/posts/Frequency&amp;Probability.html</div>
     </div>
     <div class="license-meta">
       
@@ -435,7 +435,7 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2022/08/19/%E4%BA%8C%E6%AC%A1%E5%87%BD%E6%95%B0%E8%AE%A1%E7%AE%97%E5%99%A8/" title="二次函数计算器">
+                      <a href="/posts/QuadraticFunction_calculator.html" title="二次函数计算器">
                         <span class="hidden-mobile">二次函数计算器</span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
@@ -536,7 +536,7 @@
     <div class="footer-inner">
   
     <div class="footer-content">
-       <a><span>Copyright©Eric_Luo</span></a> 
+       <a target="_blank" rel="noopener" href="https://ericluo-watersoda.gitee.io/about/"><span>Copyright©Eric_Luo</span></a> 
     </div>
   
   

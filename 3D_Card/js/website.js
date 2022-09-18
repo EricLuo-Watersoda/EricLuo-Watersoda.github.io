@@ -7,5 +7,5 @@ if(system.win||system.mac||system.xll){
 window.location.href="https://ericluo-watersoda.gitee.io/3D_Card";
 }
 else{
-window.location.href="http://baidu.com";
+window.location.href="https://ericluo-watersoda.gitee.io/Error";
 }

@@ -73,7 +73,7 @@
 		</script>
 	</body>
 <script>
-	function resize() {
+  function resize() {
   let doc = document.documentElement   //返回文档的根节点
   let width = doc.clientWidth  //获取浏览器窗口文档显示区域的宽度，不包括滚动条
   let ratio = width / 375  //将屏幕分为375份（当屏幕为375px时，ratio=1px）
@@ -85,5 +85,4 @@
 window.onresize = resize   //window.onresize监听div和屏幕的改变
 resize() //调用函数修改fontSize的值（1rem=fontSize）
 </script>
-
 </html>

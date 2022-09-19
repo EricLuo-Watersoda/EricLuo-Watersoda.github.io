@@ -6,15 +6,10 @@
 		<!-- 引入css样式 -->
 		<link rel="stylesheet" href="3D_Card/css/index.css">
 		<link rel="stylesheet" href="3D_Card/css/mybackground.css">
-	
 	</head>
 	<body>
 		<!-- 标题也居中一下 --><ol></ol>         
-		<style>
-			.box-a{width: auto;height: auto;top: 20px;}
-		</style>
-		<div class=".box-a"><h1 align="center"><font color="white">Eric_Luo</font></h1></div>
-		        
+		<h1 align="center"><font color="white">Eric_Luo</font></font></h1>      
 		<h3 align="center"><font color="white">Hi, welcome to this page. Emm?</font></h3>
 		<h3 align="center"><font color="white">Absolutely right,it's a Eg.</font></h3>
 		<h4 align="center"><font color="white">Background were written with <font color="#FF7D40">CSS</font></font></h4>  
@@ -77,4 +72,18 @@
 			});
 		</script>
 	</body>
+<script>
+	function resize() {
+  let doc = document.documentElement   //返回文档的根节点
+  let width = doc.clientWidth  //获取浏览器窗口文档显示区域的宽度，不包括滚动条
+  let ratio = width / 375  //将屏幕分为375份（当屏幕为375px时，ratio=1px）
+  let fontSize = 10 * ratio //乘10，（当屏幕为375px时，fontSize=10px）
+  if (fontSize > 20) fontSize = 20  //当屏幕为大于等于750px时，fontSize均等于20px
+  doc.style.fontSize = fontSize + 'px' //加上单位
+}
+// 监听resize事件，调整窗口大小，感受rem的作用，这里只考虑竖屏的情况
+window.onresize = resize   //window.onresize监听div和屏幕的改变
+resize() //调用函数修改fontSize的值（1rem=fontSize）
+</script>
+
 </html>

@@ -31,7 +31,7 @@ div {
 	/* 把图片放在网页中间（自己觉得合适的位置） */
 	margin: 0 auto;
 	position: relative;
-	top: 60px;
+	top: 6%;
 	/* 确定旋转角度是可用的 */
 }
 
